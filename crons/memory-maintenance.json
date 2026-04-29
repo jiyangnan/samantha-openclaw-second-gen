@@ -1,0 +1,18 @@
+{
+  "name": "memory-maintenance",
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 23 * * *",
+    "tz": "Asia/Shanghai"
+  },
+  "payload": {
+    "kind": "systemEvent",
+    "text": "执行记忆维护任务：1) 读取最近7天memory/*.md 2) 提炼长期价值信息到MEMORY.md 3) 压缩已完成任务为简短结论 4) 清理过期临时信息"
+  },
+  "delivery": {
+    "mode": "none"
+  },
+  "sessionTarget": "main",
+  "enabled": true,
+  "notify": false
+}

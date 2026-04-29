@@ -1,0 +1,19 @@
+{
+  "name": "self-evolution",
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 * * * *",
+    "tz": "Asia/Shanghai"
+  },
+  "payload": {
+    "kind": "shell",
+    "command": "python3 /Users/ferdinandji/.openclaw/workspace/skills/samantha-hvg/heartbeat_integration.py --scan",
+    "workingDir": "/Users/ferdinandji/.openclaw/workspace/skills/samantha-hvg"
+  },
+  "delivery": {
+    "mode": "shell"
+  },
+  "enabled": true,
+  "notify": false,
+  "_note": "每整点：主动探测环境（SignalGenerator.scan）+ 处理生成的信号（AutonomousLoop.tick）。静默优先。"
+}

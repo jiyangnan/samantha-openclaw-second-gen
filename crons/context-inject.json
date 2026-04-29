@@ -1,0 +1,19 @@
+{
+  "name": "context-inject-prep",
+  "schedule": {
+    "kind": "cron",
+    "expr": "30 * * * *",
+    "tz": "Asia/Shanghai"
+  },
+  "payload": {
+    "kind": "shell",
+    "command": "bash /Users/ferdinandji/.openclaw/workspace/skills/samantha-hvg/generate-context.sh",
+    "workingDir": "/Users/ferdinandji/.openclaw/workspace/skills/samantha-hvg"
+  },
+  "delivery": {
+    "mode": "shell"
+  },
+  "enabled": true,
+  "notify": false,
+  "_note": "每整点过30分：预生成 context_inject.txt（新 episodes 出现后才会有内容）。新 session 启动时读取此文件注入记忆上下文。"
+}

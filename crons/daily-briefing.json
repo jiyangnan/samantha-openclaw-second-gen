@@ -1,0 +1,19 @@
+{
+  "name": "daily-briefing",
+  "schedule": {
+    "kind": "cron",
+    "expr": "30 8 * * 1-5",
+    "tz": "Asia/Shanghai"
+  },
+  "payload": {
+    "kind": "systemEvent",
+    "text": "发送每日早报简报，包含天气、日程提醒、昨日重要事项摘要"
+  },
+  "delivery": {
+    "mode": "announce",
+    "channel": "telegram"
+  },
+  "sessionTarget": "main",
+  "enabled": true,
+  "notify": true
+}

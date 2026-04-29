@@ -1,0 +1,19 @@
+{
+  "name": "evening-reminder",
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 18 * * 1-5",
+    "tz": "Asia/Shanghai"
+  },
+  "payload": {
+    "kind": "systemEvent",
+    "text": "工作日晚间提醒：检查当日待办事项，提醒结束工作，适当休息"
+  },
+  "delivery": {
+    "mode": "announce",
+    "channel": "telegram"
+  },
+  "sessionTarget": "main",
+  "enabled": true,
+  "notify": true
+}

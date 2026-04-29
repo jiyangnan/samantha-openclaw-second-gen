@@ -1,0 +1,19 @@
+{
+  "name": "self-reflection",
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 */6 * * *",
+    "tz": "Asia/Shanghai"
+  },
+  "payload": {
+    "kind": "shell",
+    "command": "python3 /Users/ferdinandji/.openclaw/workspace/skills/samantha-hvg/heartbeat_integration.py --reflect",
+    "workingDir": "/Users/ferdinandji/.openclaw/workspace/skills/samantha-hvg"
+  },
+  "delivery": {
+    "mode": "shell"
+  },
+  "enabled": true,
+  "notify": false,
+  "_note": "每6小时深层反思：预测验证 + 目标状态检查。只在发现偏差或目标状态变化时产生信号。"
+}

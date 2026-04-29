@@ -1,0 +1,19 @@
+{
+  "name": "autonomous-loop-scan",
+  "schedule": {
+    "kind": "cron",
+    "expr": "*/5 * * * *",
+    "tz": "Asia/Shanghai"
+  },
+  "payload": {
+    "kind": "shell",
+    "command": "python3 /Users/ferdinandji/.openclaw/workspace/skills/samantha-hvg/heartbeat_integration.py --scan",
+    "workingDir": "/Users/ferdinandji/.openclaw/workspace/skills/samantha-hvg"
+  },
+  "delivery": {
+    "mode": "shell"
+  },
+  "enabled": true,
+  "notify": false,
+  "_note": "每5分钟主动探测环境：记忆量检查、目标追踪、半点/整点反思。只在有值得行动的信号时触发 tick。"
+}
